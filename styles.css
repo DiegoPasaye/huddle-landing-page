@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,400;1,600&display=swap');
+
+html{
+    background: hsl(257, 40%, 49%);
+    background-image: url("images/bg-desktop.svg");
+    background-position: center bottom;
+    background-size: cover;
+}
+.container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.left{
+    background-image: url("./images/illustration-mockups.svg");
+    height: 87vh;
+    background-size: 80%;
+    background-position: 5% 5vh;
+    background-repeat: no-repeat;
+}
+.rigth{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5vw;
+    margin-left: -10vw;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 35px;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 1vw;
+}
+
+button{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    height: 3vw;
+    border-radius: 50px;
+    width: 13vw;
+    border: none;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 5px 10px rgb(54, 54, 54);
+    cursor: pointer;
+}
+button:hover{
+    animation: cambio 0.2s;
+    animation-fill-mode: forwards;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: 2vw;
+}
+.fa-brands{
+    margin-left: 10px;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+@keyframes cambio{
+    0%{
+        color: hsl(257, 40%, 49%);
+    }
+    100%{
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+    }
+}
+
+@media (max-width:900px){
+    html{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo{
+        margin-top: 3vw;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .left{
+        width: 80%;
+        height: 70vw;
+        margin-left: 10%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .rigth{
+        display: flex;
+        margin-left: 0;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: -2vh;
+    }
+    button{
+        width: 40vw;
+        margin-left: 18vw;
+        height: 3vh;
+        margin-top: 2vh;
+    }
+    .icons{
+        justify-content: center;
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width:750px){}
